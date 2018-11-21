@@ -21,28 +21,34 @@ if (tempType === "f") {
     // Conversion Code   
         var fahrenheitToCelsius = (fahrenheit - 32)/1.8;
         var fahrenheitToKelvin = (+fahrenheit + 459.67)/1.8;
-    // Print to console
-        console.log("Fahrenheit: " + fahrenheit + " degrees F");
-        console.log("Celsius: " + fahrenheitToCelsius + " degrees C");
-        console.log("Kelvin: " + fahrenheitToKelvin+ " degrees K");
+    // Create Fahrenheit and Conversions Array
+        var fahrenheitTemps = [(fahrenheit + " degrees F"), (fahrenheitToCelsius + " degrees C"), (fahrenheitToKelvin + " K")];    
+    // Print to console individually
+        console.log("Fahrenheit: " + fahrenheitTemps[0]);
+        console.log("Celsius: " + fahrenheitTemps[1]);
+        console.log("Kelvin: " + fahrenheitTemps[2]);
 } else if (tempType === "c") {
     var celsius = whichTemp;
     // Conversion Code
         var celsiusToFahrenheit = +(celsius*1.8) + 32 ;
         var celsiusToKelvin = +celsius + 273.15 ;
+    // Create Celsius and Conversions Array
+        var celsiusTemps = [(celsius + " degrees C"), (celsiusToFahrenheit + " degrees F"), (celsiusToKelvin + " K")];
     // Print to console
-        console.log("Celsius: " + celsius + " degrees C");
-        console.log("Fahrenheit: " + celsiusToFahrenheit + " degrees F");
-        console.log("Kelvin: " + celsiusToKelvin + " degrees K");
+        console.log("Celsius: " + celsiusTemps[0]);
+        console.log("Fahrenheit: " + celsiusTemps[1]);
+        console.log("Kelvin: " + celsiusTemps[2]);
 } else if (tempType === "k") {
     var kelvin = whichTemp;
     // Conversion Code
         var kelvinToFahrenheit = (kelvin*1.8) - 459.67 ;
         var kelvinToCelsius = kelvin - 273.15 ;
+    // Create Kelvin and Conversions Array
+        var kelvinTemps = [(kelvin + " K"), (kelvinToFahrenheit + " degrees F"), (kelvinToCelsius + " degrees C")];
     // Print to console
-        console.log("Kelvin: " + kelvin + " degrees K");
-        console.log("Fahrenheit: " + kelvinToFahrenheit + " degrees F");
-        console.log("Celsius: " + kelvinToCelsius + " degrees C");
+        console.log("Kelvin: " + kelvinTemps[0]);
+        console.log("Fahrenheit: " + kelvinTemps[1]);
+        console.log("Celsius: " + kelvinTemps[2]);
 }
 /*
 
