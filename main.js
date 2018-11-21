@@ -22,27 +22,27 @@ if (tempType === "f") {
         var fahrenheitToCelsius = (fahrenheit - 32)/1.8;
         var fahrenheitToKelvin = (+fahrenheit + 459.67)/1.8;
     // Print to console
-        console.log("Fahrenheit: " + fahrenheit + " degrees");
-        console.log("Celsius: " + fahrenheitToCelsius + " degrees");
-        console.log("Kelvin: " + fahrenheitToKelvin+ " degrees");
+        console.log("Fahrenheit: " + fahrenheit + " degrees F");
+        console.log("Celsius: " + fahrenheitToCelsius + " degrees C");
+        console.log("Kelvin: " + fahrenheitToKelvin+ " degrees K");
 } else if (tempType === "c") {
     var celsius = whichTemp;
     // Conversion Code
         var celsiusToFahrenheit = +(celsius*1.8) + 32 ;
         var celsiusToKelvin = +celsius + 273.15 ;
     // Print to console
-        console.log("Celsius: " + celsius);
-        console.log("Fahrenheit: " + celsiusToFahrenheit);
-        console.log("Kelvin: " + celsiusToKelvin);
+        console.log("Celsius: " + celsius + " degrees C");
+        console.log("Fahrenheit: " + celsiusToFahrenheit + " degrees F");
+        console.log("Kelvin: " + celsiusToKelvin + " degrees K");
 } else if (tempType === "k") {
     var kelvin = whichTemp;
     // Conversion Code
         var kelvinToFahrenheit = (kelvin*1.8) - 459.67 ;
         var kelvinToCelsius = kelvin - 273.15 ;
     // Print to console
-        console.log("Kelvin: " + kelvin);
-        console.log("Fahrenheit: " + kelvinToFahrenheit);
-        console.log("Celsius: " + kelvinToCelsius);
+        console.log("Kelvin: " + kelvin + " degrees K");
+        console.log("Fahrenheit: " + kelvinToFahrenheit + " degrees F");
+        console.log("Celsius: " + kelvinToCelsius + " degrees C");
 }
 /*
 
