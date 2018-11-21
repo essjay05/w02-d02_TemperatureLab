@@ -25,19 +25,18 @@ if (tempType === "f") {
         var fahrenheitToKelvin = (+fahrenheit + 459.67)/1.8;
     // Create Fahrenheit and Conversions Array
         var fahrenheitTemps = [(fahrenheit + " degrees F"), (fahrenheitToCelsius + " degrees C"), (fahrenheitToKelvin + " K")];    
+    /*  ---------------- For/While Loop (Pt2 Bonus1)
+                        var text = " ";
+                        var i = 0;
+                            do {
+                            text += fahrenheitTemps[0] + i;
+                            i++;
+                            while (i < 3);
+                        }   ------------------------------- */
     // Print to console individually
-        // For/While Loop (Pt2 Bonus1)
-        var text = " ";
-        var i = 0;
-        do {
-            text += fahrenheitTemps[0] + i;
-            i++;
-        while (i < 3);
-    /*  
         console.log("Fahrenheit: " + fahrenheitTemps[0]);
         console.log("Celsius: " + fahrenheitTemps[1]);
         console.log("Kelvin: " + fahrenheitTemps[2]);
-    */
 } else if (tempType === "c") {
     var celsius = whichTemp;
     // Conversion Code
