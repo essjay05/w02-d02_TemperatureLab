@@ -14,52 +14,69 @@
 
 
 // ASK USER FOR TEMPERATURE (AND TYPE) TO CONVERT
-var whichTemp = prompt("What temperature would you like to convert?");
-var tempType = prompt("What unit of temperature? (f = Fahrenheit, c = Celsius, k = Kelvin)");
-console.log(whichTemp + " degrees " + tempType);
 
-if (tempType === "f") {
-    var fahrenheit = whichTemp;
-    // Conversion Code   
-        var fahrenheitToCelsius = (fahrenheit - 32)/1.8;
-        var fahrenheitToKelvin = (+fahrenheit + 459.67)/1.8;
-    // Create Fahrenheit and Conversions Array
-        var fahrenheitTemps = [(fahrenheit + " degrees F"), (fahrenheitToCelsius + " degrees C"), (fahrenheitToKelvin + " K")];    
-    /*  ---------------- For/While Loop (Pt2 Bonus1)
-                        var text = " ";
-                        var i = 0;
-                            do {
-                            text += fahrenheitTemps[0] + i;
-                            i++;
-                            while (i < 3);
-                        }   ------------------------------- */
-    // Print to console individually
-        console.log("Fahrenheit: " + fahrenheitTemps[0]);
-        console.log("Celsius: " + fahrenheitTemps[1]);
-        console.log("Kelvin: " + fahrenheitTemps[2]);
-} else if (tempType === "c") {
-    var celsius = whichTemp;
-    // Conversion Code
-        var celsiusToFahrenheit = +(celsius*1.8) + 32 ;
-        var celsiusToKelvin = +celsius + 273.15 ;
-    // Create Celsius and Conversions Array
-        var celsiusTemps = [(celsius + " degrees C"), (celsiusToFahrenheit + " degrees F"), (celsiusToKelvin + " K")];
-    // Print to console
-        console.log("Celsius: " + celsiusTemps[0]);
-        console.log("Fahrenheit: " + celsiusTemps[1]);
-        console.log("Kelvin: " + celsiusTemps[2]);
-} else if (tempType === "k") {
-    var kelvin = whichTemp;
-    // Conversion Code
-        var kelvinToFahrenheit = (kelvin*1.8) - 459.67 ;
-        var kelvinToCelsius = kelvin - 273.15 ;
-    // Create Kelvin and Conversions Array
-        var kelvinTemps = [(kelvin + " K"), (kelvinToFahrenheit + " degrees F"), (kelvinToCelsius + " degrees C")];
-    // Print to console
-        console.log("Kelvin: " + kelvinTemps[0]);
-        console.log("Fahrenheit: " + kelvinTemps[1]);
-        console.log("Celsius: " + kelvinTemps[2]);
-}
+var temp = "";
+var temps = [];
+while (temp !=='end') {
+    temp = prompt ("Enter a temperature to convert (Type 'end' to quit).");
+    var tempType = prompt("What unit of temperature? (f = Fahrenheit, c = Celsius, k = Kelvin) or Type 'End' to quit conversions.");
+        console.log(temp + " degrees " + tempType);
+    // var whichTemp = prompt("What temperature would you like to convert?");
+    //let tempType = prompt("What unit of temperature? (f = Fahrenheit, c = Celsius, k = Kelvin) or Type 'End' to quit conversions.");
+    //for (tempType = 0; tempType !== 'End' || tempType !== 'end' || tempType !== 'END' ; tempType++) {
+    //do {
+        
+
+                    if (tempType === "f") {
+                    var fahrenheit = temp;
+                    // Conversion Code   
+                        var fahrenheitToCelsius = (fahrenheit - 32)/1.8;
+                        var fahrenheitToKelvin = (+fahrenheit + 459.67)/1.8;
+                    // Create Fahrenheit and Conversions Array
+                        var fahrenheitTemps = [(fahrenheit + " degrees F"), (fahrenheitToCelsius + " degrees C"), (fahrenheitToKelvin + " K")];    
+                    /*  ---------------- For/While Loop (Pt2 Bonus1)
+                                        var text = " ";
+                                        var i = 0;
+                                            do {
+                                            text += fahrenheitTemps[0] + i;
+                                            i++;
+                                            while (i < 3);
+                                        }   ------------------------------- */
+                    // Print to console individually
+                        console.log("Fahrenheit: " + fahrenheitTemps[0]);
+                        console.log("Celsius: " + fahrenheitTemps[1]);
+                        console.log("Kelvin: " + fahrenheitTemps[2]);
+                } else if (tempType === "c") {
+                    var celsius = temp;
+                    // Conversion Code
+                        var celsiusToFahrenheit = +(celsius*1.8) + 32 ;
+                        var celsiusToKelvin = +celsius + 273.15 ;
+                    // Create Celsius and Conversions Array
+                        var celsiusTemps = [(celsius + " degrees C"), (celsiusToFahrenheit + " degrees F"), (celsiusToKelvin + " K")];
+                    // Print to console
+                        console.log("Celsius: " + celsiusTemps[0]);
+                        console.log("Fahrenheit: " + celsiusTemps[1]);
+                        console.log("Kelvin: " + celsiusTemps[2]);
+                } else if (tempType === "k") {
+                    var kelvin = temp;
+                    // Conversion Code
+                        var kelvinToFahrenheit = (kelvin*1.8) - 459.67 ;
+                        var kelvinToCelsius = kelvin - 273.15 ;
+                    // Create Kelvin and Conversions Array
+                        var kelvinTemps = [(kelvin + " K"), (kelvinToFahrenheit + " degrees F"), (kelvinToCelsius + " degrees C")];
+                    // Print to console
+                        console.log("Kelvin: " + kelvinTemps[0]);
+                        console.log("Fahrenheit: " + kelvinTemps[1]);
+                        console.log("Celsius: " + kelvinTemps[2]);
+            }
+            if (temp !== 'end') temps.push(temp);
+            console.log("You've entered: " + temps.join(', '))
+        };
+            /* while (whichTemp === 'End' || whichTemp === 'end' || whichTemp === 'END') {
+            console.log("Thank you for choosing us to convert your temperatures.")
+            break; */
+       // } while (tempType !== 'End' || tempType !== 'end' || tempType !== 'END');
+    //}
 /*
 
 //------------------------------------------------//
